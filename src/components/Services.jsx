@@ -1,17 +1,9 @@
-import ListComponent from "./ListComponent";
 
-const data = [
-     { imagePath: photo08, text: 'This is the first Service Offered' },
-     { imagePath: photo09, text: 'This is the second Service Offered' },
-];
-
-function Services(){
-    return(
-        <>
-            <h3>Services</h3>
-            <ListComponent items={data} />
-        </>
-    );
+export default function Services() {
+  return (
+    <div>
+      <h1>Services</h1>
+      <p>Our services will be listed here.</p>
+    </div>
+  );
 }
-
-export default Services;
