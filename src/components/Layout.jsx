@@ -1,17 +1,36 @@
-import { Link } from "react-router-dom";
+// src/components/Layout.jsx
+import { NavLink, Outlet } from "react-router-dom";
+import logo from "../assets/logo.jpeg"; // put a logo image here (see step 3)
+import "./layout.css";                 // styles below
 
-function Layout() {
-    return (
-        <div>
-            <h1>Layout Page</h1>
-            <nav className="navbar">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/services">Services</Link>
-            </nav>
+export default function Layout() {
+  return (
+    <header className="site-header">
+      <div className="topbar">
+        <div className="brand">
+          <img src={logo} alt="Logo" className="logo" />
+          <h1 className="title">My Portfolio Website</h1>
         </div>
-    );
-}
 
-export default Layout;
+        <nav className="navbar">
+          <NavLink to="/" end className="navlink">
+            Home
+          </NavLink>
+          <NavLink to="/about" className="navlink">
+            About
+          </NavLink>
+          <NavLink to="/projects" className="navlink">
+            Projects
+          </NavLink>
+          <NavLink to="/services" className="navlink">
+            Services
+          </NavLink>
+        </nav>
+      </div>
+
+      {/* If you're using nested routes, the page content renders here */}
+      <Outlet />
+      <hr />
+    </header>
+  );
+}

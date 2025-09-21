@@ -1,22 +1,10 @@
 import ListComponent from "./ListCompnent";
 
 const data = [
-    {
-        title: photo10,
-        text: "Title 01",
-        imagePath: "This is the first item"
-    },
-    {
-        title: photo11,
-        text: "Title 02",
-        imagePath: "This is the second item"
-    },
-    {
-        title: photo12,
-        text: "Title 03",
-        imagePath: "This is the third item"
-    }
-]
+  { title: "Project 1", text: "This is the first item",  imagePath: "" },
+  { title: "Project 2", text: "This is the second item", imagePath: "" },
+  { title: "Project 3", text: "This is the third item",  imagePath: "" },
+];
         
     
 

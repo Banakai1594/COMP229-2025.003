@@ -1,11 +1,11 @@
-import Rowcomponent from "./Rowcomponent";
+import RowComponent from "./RowComponent";
 
-function ListComponent({items}) {
-    return (
+function ListComponent({ items }){
+    return(
         <div>
-            {items.map ((item, i) => (
-                <Rowcomponent key={i} item={item} />
-                ))}
+            {items.map( (item, index)=>(
+                <RowComponent key={index} itemObject={item} />
+            ) )}
         </div>
     );
 }
