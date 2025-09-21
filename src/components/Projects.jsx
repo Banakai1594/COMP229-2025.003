@@ -2,18 +2,15 @@ export default function Projects() {
   const projects = [
     {
       title: "TapAndGo (SRS / UML)",
-      text: "Requirements & diagrams for an ATM reservation feature; team doc and presentation.",
-      imagePath: ""
+      text: "Requirements & diagrams for an ATM reservation feature; team doc and presentation."
     },
     {
-      title: "Bookstore Database (Oracle SQL)",
-      text: "ERD, constraints, sample data, and queries for an Amazon-style storefront.",
-      imagePath: ""
+      title: "Linux Load Balancer (Nginx)",
+      text: "Configured Nginx to distribute traffic across app servers, tested health checks, and verified failover."
     },
     {
       title: "Fraction Calculator (C# WinForms)",
-      text: "GUI calculator supporting + − × ÷ and simplify; input validation and clean UX.",
-      imagePath: ""
+      text: "GUI calculator with + − × ÷ and simplify; input validation and clean UX."
     },
   ];
 
@@ -23,14 +20,6 @@ export default function Projects() {
       <div className="grid">
         {projects.map((p, i) => (
           <article className="card" key={i}>
-            {p.imagePath ? (
-              <img
-                src={p.imagePath}
-                alt={p.title}
-                style={{ width: "100%", height: 140, objectFit: "cover", borderRadius: 10, marginBottom: 10 }}
-                onError={(e) => (e.currentTarget.style.display = "none")}
-              />
-            ) : null}
             <h3>{p.title}</h3>
             <p>{p.text}</p>
           </article>

@@ -1,14 +1,14 @@
+import photo from "../assets/profile.jpg";
+
 export default function About() {
   return (
     <section className="section">
       <h1>About Me</h1>
-      <p>
-        I’m Ali Mustafa, a student at Centennial College focusing on web development
-        (React, JavaScript) and database work (SQL). I like building clean UIs and
-        small utilities that solve real problems.
-      </p>
-      <p>
-        Resume (PDF): <a href="/assets/resume.pdf" target="_blank" rel="noreferrer">Download</a>
+      <img src={photo} alt="Ali Mustafa" className="avatar" />
+      <p style={{marginTop:12}}>
+        I’m a student at Centennial College focusing on React, JavaScript, C#, and SQL.
+        I enjoy translating course requirements into working apps and clean documentation.
+        Outside of class, I explore Linux servers and deployment basics.
       </p>
     </section>
   );

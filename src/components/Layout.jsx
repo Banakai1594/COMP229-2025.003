@@ -18,9 +18,7 @@ export default function Layout() {
           <NavLink to="/contact" className="navlink">Contact</NavLink>
         </nav>
       </div>
-      <main className="page-area">
-        <Outlet />
-      </main>
+      <main className="page-area"><Outlet /></main>
       <footer className="footer">© {new Date().getFullYear()} Ali Mustafa</footer>
     </header>
   );
