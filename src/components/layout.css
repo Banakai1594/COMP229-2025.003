@@ -34,8 +34,9 @@ a { color: inherit; }
   width: 60px; height: 60px; display: block;
   object-fit: cover;          /* fills the circle; crops tiny edges for a "zoomed" look */
   padding: 4px;               /* thinner ring so logo looks larger */
+  border-radius: 9999px;
   background: var(--ring);    /* makes white/transparent logos visible on white */
-  border-radius: 10px;
+  border: 2px solid var(--primary);
   box-shadow: var(--shadow);
 }
 
@@ -131,30 +132,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 640px){
   .topbar { flex-direction: column; align-items: flex-start; }
   .form .row { grid-template-columns: 1fr; }
-}
-
-
-/* Center the topbar row with the same max width as pages */
-.site-header .topbar {
-  max-width: 1100px;
-  margin: 0 auto;         /* centers the brand + nav */
-}
-
-/* Center EVERY page, even if it forgets the .section class */
-.page-area {
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
-}
-.page-area > * {
-  max-width: 980px;
-  width: 100%;
-  padding: 12px;
-}
-
-/* If you use .section, keep it consistent */
-.section {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 12px;
 }

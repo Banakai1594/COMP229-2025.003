@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({
-    firstName: "", lastName: "", phone: "", email: "", subject: "", message: ""
-  });
+  const [form, setForm] = useState({ firstName:"", lastName:"", phone:"", email:"", subject:"", message:"" });
   const [errors, setErrors] = useState({});
 
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
@@ -25,9 +23,9 @@ export default function Contact() {
   const onSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
-    console.log("Contact form:", form);      // captured data
-    alert("Thanks for reaching out! I’ll get back to you soon.");
-    navigate("/");                            // redirect to Home
+    console.log("Contact form:", form);
+    alert("Thanks! I’ll get back to you soon.");
+    navigate("/");
   };
 
   return (
@@ -51,8 +49,6 @@ export default function Contact() {
           <div>
             <label className="label" htmlFor="phone">Contact Number</label>
             <input id="phone" name="phone" className="input" value={form.phone} onChange={onChange} placeholder="+1 555 123 4567" />
-            <div className="help">Optional. Numbers, spaces, +, -, ( )</div>
-            {errors.phone && <div className="error">{errors.phone}</div>}
           </div>
           <div>
             <label className="label" htmlFor="email">Email Address</label>

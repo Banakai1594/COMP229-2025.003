@@ -10,7 +10,6 @@ import NotFound from "./components/NotFound";
 export default function MainRoutes() {
   return (
     <Routes>
-      {/* EVERYTHING goes under Layout */}
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
