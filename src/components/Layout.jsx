@@ -3,11 +3,14 @@ import logo from "../assets/logo.png";
 import "./layout.css";
 
 export default function Layout() {
+  const fallback = "/vite.svg";
+  const onLogoError = (e) => { e.currentTarget.src = fallback; e.currentTarget.onerror = null; };
+
   return (
     <header className="site-header">
       <div className="topbar">
         <div className="brand">
-          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="brand-logo" onError={onLogoError} />
           <h1 className="title">Ali Mustafa — Portfolio</h1>
         </div>
         <nav className="navbar">
