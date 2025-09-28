@@ -35,6 +35,7 @@ a { color: inherit; }
   object-fit: cover;          /* fills the circle; crops tiny edges for a "zoomed" look */
   padding: 4px;               /* thinner ring so logo looks larger */
   background: var(--ring);    /* makes white/transparent logos visible on white */
+  border-radius: 10px;
   box-shadow: var(--shadow);
 }
 
